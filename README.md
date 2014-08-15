@@ -42,6 +42,8 @@ Alternatively, you can build as one of the following methods:
 
 Import the `android/DemoImport` project, then run the `DemoImport` demo app.
 
-## How to Contribute
+## License
+
+This is an open source LGPL 2.1 licensed project based on TouchVG project.
 
 Contributors and sponsors are welcome. You may commit issues or pull requests on this Github site.
