@@ -1,0 +1,17 @@
+# Type `pod update --no-repo-update` to update repos.
+
+platform :ios, '6.0'
+
+pod 'TouchVG'
+
+pre_install do |installer|
+  projfile = "DemoImport.xcodeproj/project.pbxproj"
+  
+  if File.exists?(projfile)
+    File.open("proj.tmp", "w") do |io|
+      io << File.read(projfile).gsub(/((OTHER_LDFLAGS)|(HEADER_SEARCH_PATHS)|(LIBRARY_SEARCH_PATHS)) =([\s]|[^;])*;[\s]*/, '')
+    end
+    FileUtils.mv("proj.tmp", projfile)
+    system 'rm -fR DemoImport.xcworkspace'
+  end
+end
