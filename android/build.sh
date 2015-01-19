@@ -6,10 +6,10 @@
 #
 
 if [ ! -f ../../vgcore/android/build.sh ] ; then
-    git clone https://github.com/touchvg/vgcore ../../vgcore
+    git clone https://github.com/rhcad/vgcore ../../vgcore
 fi
 if [ ! -f ../../vgandroid/build.sh ] ; then
-    git clone https://github.com/touchvg/vgandroid ../../vgandroid
+    git clone https://github.com/rhcad/vgandroid ../../vgandroid
 fi
 
 cd ../../vgandroid; sh build.sh $1 $2; cd ../DemoImport/android
